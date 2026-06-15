@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Depositar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 
+
+    Implementar formularios de transacción con validaciones básicas y gestion el saldo
+    Implementar el evento "Realizar depósito"
+    Actualizar saldo y mostrar mensajes dinámicos
+
+    -->
+
+    <header>
+        <h1>Alke Wallet</h1>
+        <nav>
+            <a href="index.html">Mi Wallet</a>
+            <a href="#">Transferir</a>
+            <a href="transactions.html">Transacciones</a>
+            <a href="#">Recargar</a>
+            <a href="profile.html">Perfil</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Depositar</h2>
+        <form>
+        <div class="form-group">
+            <label for="depositAmount">Monto a depositar:</label>
+            <input type="number" class="form-control" id="depositAmount" placeholder="Enter amount">
+        </div>
+        <button type="submit" class="btn btn-primary">Realizar depósito</button>
+        </form>
+        <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+    </div>
+
+    <input type="number" id="amount">
+
+    <button id="btnDeposit">
+        Depositar
+    </button>
+
+    <button id="btnWithdraw">
+        Retirar
+    </button>
+    
+</body>
+</html>

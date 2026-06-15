@@ -3,13 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alke Wallet - Enviar dineros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- 
 
-    Implementar formularios con validaciones básicas
+    Implementar formularios de transacción con validaciones básicas
+    Crear la función para simular una transferencia
+    Evento "Agregar nuevo contacto"
+    Habilitar la función de autocompletar en la búsqueda de contactos
     
     -->
+
+    <header>
+        <h1>Alke Wallet</h1>
+        <nav>
+            <a href="index.html">Mi Wallet</a>
+            <a href="#">Transferir</a>
+            <a href="transactions.html">Transacciones</a>
+            <a href="#">Recargar</a>
+            <a href="profile.html">Perfil</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Enviar Dinero</h2>
+        <form>
+        <div class="form-group">
+            <label for="searchContact">Buscar en la agenda de transferencias:</label>
+            <input type="text" class="form-control" id="searchContact" placeholder="Search contact">
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar nuevo contacto</button>
+    <h3>Contactos</h3>
+    <ul id="contactList" class="list-group">
+        <li class="list-group-item">
+        <div class="contact-info">
+            <span class="contact-name">John Doe</span>
+            <span class="contact-details">CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span>
+        </div>
+        </li>
+        <li class="list-group-item">
+        <div class="contact-info">
+            <span class="contact-name">Jane Smith</span>
+            <span class="contact-details">CBU: 987654321, Alias: jane.smith, Banco: XYZ Bank</span>
+        </div>
+        </li>
+        <button type="submit" class="btn btn-primary">Enviar dinero</button>
+        </form>
+        <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+    </div>
+
+    <div id="contacts-list">
+
+    </div>
+
+    <select id="contact">
+        <option>Juan Pérez</option>
+        <option>María Soto</option>
+    </select>
+
+    <input type="number" id="transferAmount">
+
+    <button id="btnTransfer">
+        Transferir
+    </button>
+
 </body>
 </html>

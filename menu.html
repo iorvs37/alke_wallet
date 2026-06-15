@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alke Wallet - Menú</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- Pantalla del menú principal
@@ -11,5 +13,52 @@
     Implementar formularios con validaciones básicas
     
     -->
+
+    <header>
+        <h1>Alke Wallet</h1>
+        <nav>
+            <a href="index.html">Mi Wallet</a>
+            <a href="#">Transferir</a>
+            <a href="transactions.html">Transacciones</a>
+            <a href="#">Recargar</a>
+            <a href="profile.html">Perfil</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Menú Principal</h2>
+        <div class="form-group">
+        <label for="balance">Dinero en cuenta:</label>
+        <h3>$60000</h3>
+        </div>
+        <a href="deposit.html" class="btn btn-primary">Depositar</a>
+        <a href="sendmoney.html" class="btn btn-warning">Enviar Dinero/Transferir</a>
+        <a href="transactions.html" class="btn btn-dark">Últimos Movimientos/Historial</a>
+    </div>
+
+    <div class="container">
+        <h1>My Wallet</h1>
+        <div class="row">
+        <div class="col-md-6">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount">
+            <button id="depositBtn" class="btn btn-primary">Deposito</button>
+            <button id="withdrawBtn" class="btn btn-primary">Retirar</button>
+        </div>
+        <div class="col-md-6">
+            <h2>Balance:</h2>
+            <p id="balance">0</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="card saldo-card">
+        <h5>Saldo Disponible</h5>
+        <h2 id="balance">$150.000</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
