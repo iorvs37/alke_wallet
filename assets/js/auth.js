@@ -3,7 +3,7 @@ $('#btnLogin').click(function() {
     var email = $('#email').val();
     var pass = $('#password').val();
     
-    if(email === 'admin@alky.cl' && pass === '12345') {
+    if(email === 'admin@alke.cl' && pass === '12345') {
         window.location.href = 'menu.html';
     } else {
         alert('Datos incorrectos');
