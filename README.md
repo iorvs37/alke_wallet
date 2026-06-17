@@ -1,3 +1,4 @@
+```
 Flujo de navegación
 index.html
       │
@@ -20,14 +21,17 @@ menu.html
                       │
                       ▼
                  menu.html
+```
+
+git init
+git add .
+git commit -m "avance"
+git push -u origin main
 
 
-
-
-
-                 Crear una billetera digital que permita a los usuarios gestionar sus activos financieros de manera segura y conveniente.
+Alke Wallet es una billetera digital que permita a los usuarios gestionar sus activos financieros de manera segura y conveniente.
     
-    La wallet debe cumplir con los siguientes requisitos:
+    La billetera debe cumplir con los siguientes requisitos:
     - Registro e inicio de sesión: Se les asignará a los usuarios una cuenta y acceder a la aplicación utilizando credenciales seguras
     - Administración de fondos: Los usuarios deben poder ver su saldo disponible, realizar depósitos y retiros de fondos
     - Envío y recepción de fondos: Los usuarios deben poder simular un envió de fondos a otras cuentas dentro de la aplicación y recibir fondos propios

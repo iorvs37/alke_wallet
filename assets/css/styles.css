@@ -54,3 +54,8 @@ footer {
     max-width: 400px;
     margin: 0 auto;
     }
+
+.semicontainer {
+    max-width: 200px;
+    margin: 0 auto;
+    }

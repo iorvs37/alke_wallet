@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="text-center mt-5">
     <!-- 
 
     Implementar formularios de transacción con validaciones básicas y gestion el saldo
@@ -19,24 +19,34 @@
     <header>
         <h1>Alke Wallet</h1>
         <nav>
-            <a href="index.html">Mi Wallet</a>
-            <a href="#">Transferir</a>
-            <a href="transactions.html">Transacciones</a>
-            <a href="#">Recargar</a>
-            <a href="profile.html">Perfil</a>
+            <a href="menu.html" class="btn btn-primary">Mi Wallet</a>
+            <a href="deposit.html" class="btn btn-secondary">Depositar dinero</a>
+            <a href="sendmoney.html" class="btn btn-warning">Enviar dinero</a>
+            <a href="transactions.html" class="btn btn-dark">Historial de transacciones</a>
+            <a href="profile.html" class="btn btn-dark">Perfil</a>
+            <button type="button" id="btnLogout" class="btn btn-danger">Cerrar Sesión</button>
         </nav>
     </header>
 
     <div class="container">
         <h2>Depositar</h2>
+
+        <div id="alertMensaje" class="alert alert-success" hidden></div>
+        <div id="depositBox">
+            <div class="form-group">
+                <label>Monto a depositar:</label>
+                <input type="number" class="form-control" id="inputDeposito" placeholder="Ingrese una cantidad">
+            </div>
+            <button type="button" id="btnDepositar" class="btn btn-success">Realizar depósito</button>
+        </div>
+        
         <form>
         <div class="form-group">
             <label for="depositAmount">Monto a depositar:</label>
-            <input type="number" class="form-control" id="depositAmount" placeholder="Enter amount">
+            <input type="number" class="form-control" id="depositAmount" placeholder="Ingrese una cantidad">
         </div>
         <button type="submit" class="btn btn-primary">Realizar depósito</button>
         </form>
-        <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
     </div>
 
     <input type="number" id="amount">
@@ -48,6 +58,14 @@
     <button id="btnWithdraw">
         Retirar
     </button>
+
+    <br>
+    <footer>
+        <p>Alke Wallet - Todos los derechos reservado 2026</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/balance.js"></script>
     
 </body>
 </html>

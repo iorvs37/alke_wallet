@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="text-center mt-5">
     <!-- Pantalla del menú principal
 
     Implementar formularios con validaciones básicas
@@ -17,48 +17,35 @@
     <header>
         <h1>Alke Wallet</h1>
         <nav>
-            <a href="index.html">Mi Wallet</a>
-            <a href="#">Transferir</a>
-            <a href="transactions.html">Transacciones</a>
-            <a href="#">Recargar</a>
-            <a href="profile.html">Perfil</a>
+            <a href="menu.html" class="btn btn-primary">Mi Wallet</a>
+            <a href="deposit.html" class="btn btn-secondary">Depositar dinero</a>
+            <a href="sendmoney.html" class="btn btn-warning">Enviar dinero</a>
+            <a href="transactions.html" class="btn btn-dark">Historial de transacciones</a>
+            <a href="profile.html" class="btn btn-dark">Perfil</a>
+            <button type="button" id="btnLogout" class="btn btn-danger">Cerrar Sesión</button>
         </nav>
     </header>
 
-    <div class="container">
+    <div class="card saldo-card">
+        <p></p>
         <h2>Menú Principal</h2>
         <div class="form-group">
-        <label for="balance">Dinero en cuenta:</label>
-        <h3>$60000</h3>
-        </div>
-        <a href="deposit.html" class="btn btn-primary">Depositar</a>
-        <a href="sendmoney.html" class="btn btn-warning">Enviar Dinero/Transferir</a>
-        <a href="transactions.html" class="btn btn-dark">Últimos Movimientos/Historial</a>
-    </div>
-
-    <div class="container">
-        <h1>My Wallet</h1>
-        <div class="row">
-        <div class="col-md-6">
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount">
-            <button id="depositBtn" class="btn btn-primary">Deposito</button>
-            <button id="withdrawBtn" class="btn btn-primary">Retirar</button>
-        </div>
-        <div class="col-md-6">
-            <h2>Balance:</h2>
-            <p id="balance">0</p>
-        </div>
+        <label for="balance">Saldo disponible:</label>
+        <h2 id="balance">0</h2>
+        <label for="amount">Cantidad:</label>
+        <input type="number" id="amount">
+        <button id="depositBtn" class="btn btn-primary">Depositar</button>
+        <button id="withdrawBtn" class="btn btn-primary">Retirar</button>
         </div>
     </div>
 
-    <div class="card saldo-card">
-        <h5>Saldo Disponible</h5>
-        <h2 id="balance">$150.000</h2>
-    </div>
+    <br>
+    <footer>
+        <p>Alke Wallet - Todos los derechos reservado 2026</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/balance.js"></script>
 
 </body>
 </html>

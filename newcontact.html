@@ -1,13 +1,74 @@
-<div class="card">
 
-    <h4>Mis Contactos</h4>
 
-    <input type="text" id="newContact">
 
-    <button id="btnAddContact">
-        Agregar
-    </button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Agregar Destinatario - Wallet CLP</title>
+</head>
+<body>
 
-    <ul id="contactList"></ul>
+    <header>
+        <h1>Wallet CLP</h1>
+        <nav>
+            <a href="index.html">Mi Wallet</a>
+            <a href="#">Transferir</a>
+            <a href="destinatarios.html">Destinatarios</a>
+            <a href="#">Recargar</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+    </header>
 
-</div>
+    <main>
+        <h2>Agregar nuevo destinatario</h2>
+
+        <form action="#" method="post">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut" placeholder="12.345.678-9" required>
+            <br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+569 1234 5678">
+            <br><br>
+
+            <button type="submit">Guardar destinatario</button>
+            <button type="reset">Limpiar formulario</button>
+        </form>
+
+        <p><a href="destinatarios.html">Volver a mis destinatarios</a></p>
+
+        <div class="card">
+
+            <h4>Mis Contactos</h4>
+
+            <input type="text" id="newContact">
+
+            <button id="btnAddContact">
+                Agregar
+            </button>
+
+            <ul id="contactList"></ul>
+
+        </div>
+
+
+    </main>
+
+    <br>
+    <footer>
+        <p>Alke Wallet - Todos los derechos reservado 2026</p>
+    </footer>
+    
+<script src="assets/js/contacts.js"></script>
+</body>
+</html>

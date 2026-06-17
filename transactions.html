@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alke Wallet - Transacciones</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="text-center mt-5">
     <!-- 
     
     Visualización de transacciones recientes
@@ -17,22 +18,12 @@
     <header>
         <h1>Alke Wallet</h1>
         <nav>
-            <a href="index.html">Mi Wallet</a>
-            <a href="#">Transferir</a>
-            <a href="transactions.html">Transacciones</a>
-            <a href="#">Recargar</a>
-            <a href="profile.html">Perfil</a>
-        </nav>
-    </header>
-
-    <header>
-        <h1>Wallet CLP</h1>
-        <nav>
-            <a href="index.html">Mi Wallet</a>
-            <a href="#">Transferir</a>
-            <a href="destinatarios.html">Destinatarios</a>
-            <a href="#">Recargar</a>
-            <a href="perfil.html">Perfil</a>
+            <a href="menu.html" class="btn btn-primary">Mi Wallet</a>
+            <a href="deposit.html" class="btn btn-secondary">Depositar dinero</a>
+            <a href="sendmoney.html" class="btn btn-warning">Enviar dinero</a>
+            <a href="transactions.html" class="btn btn-dark">Historial de transacciones</a>
+            <a href="profile.html" class="btn btn-dark">Perfil</a>
+            <button type="button" id="btnLogout" class="btn btn-danger">Cerrar Sesión</button>
         </nav>
     </header>
 
@@ -84,6 +75,11 @@
         </tbody>
 
     </table>
+
+    <br>
+    <footer>
+        <p>Alke Wallet - Todos los derechos reservado 2026</p>
+    </footer>
 
 </body>
 </html>

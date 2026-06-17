@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alke Wallet - Perfil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="text-center mt-5">
     
     <header>
         <h1>Alke Wallet</h1>
         <nav>
-            <a href="index.html">Mi Wallet</a>
-            <a href="#">Transferir</a>
-            <a href="transactions.html">Transacciones</a>
-            <a href="#">Recargar</a>
-            <a href="profile.html">Perfil</a>
+            <a href="menu.html" class="btn btn-primary">Mi Wallet</a>
+            <a href="deposit.html" class="btn btn-secondary">Depositar dinero</a>
+            <a href="sendmoney.html" class="btn btn-warning">Enviar dinero</a>
+            <a href="transactions.html" class="btn btn-dark">Historial de transacciones</a>
+            <a href="profile.html" class="btn btn-dark">Perfil</a>
+            <button type="button" id="btnLogout" class="btn btn-danger">Cerrar Sesión</button>
         </nav>
     </header>
 
     <main>
         <h2>Mi Perfil</h2>
-        <p><strong>Nombre:</strong> Usuario Wallet</p>
-        <p><strong>Correo:</strong> usuario@walletclp.cl</p>
+        <p><strong>Nombre:</strong> Walter White</p>
+        <p><strong>Correo:</strong> admin@alke.cl</p>
         <p><strong>RUT:</strong> 12.345.678-9</p>
     </main>
 
+    <br>
     <footer>
         <p>Wallet CLP - Todos los derechos reservado 2026</p>
     </footer>

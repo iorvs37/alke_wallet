@@ -3,51 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alke Wallet - Log in</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Alke Wallet - Iniciar sesión</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="text-center mt-5">
 
     <!-- Pantalla de inicio de sesión y validación de credenciales -->
     
     <div class="container">
-        <h2>Login</h2>
-        <form>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+        <h1>Iniciar sesión</h1>
+        <p class="text-muted"><small>Credenciales de prueba: <strong>admin@alke.cl</strong> / <strong>12345</strong></small></p>
+
+        <div id="loginBox">
+            <div class="form-group">
+                <label>Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese correo electrónico" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Contraseña:</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingrese contraseña" required>
+            </div>
+            
+            <button type="button" id="btnLogin" class="btn btn-success">Ingresar</button>
         </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password">
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-        <a href="menu.html" class="btn btn-secondary">Ir al Menú Principal</a>
+        
     </div>
 
-    <div class="container">
-        <h1>Login</h1>
-        <form id="loginForm">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-    </div>
-
-    <button id="btnLogin" class="btn btn-success">
-        Ingresar
-    </button>
+    <br>
+    <footer>
+        <p>Alke Wallet - Todos los derechos reservado 2026</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/auth.js"></script>
 
 </body>
 </html>

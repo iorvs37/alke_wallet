@@ -1,0 +1,9 @@
+# --- Editores de código (Esencial) ---
+.vscode/
+.idea/
+*.suo
+*.swp
+
+# --- Archivos basura del Sistema Operativo ---
+Thumbs.db
+desktop.ini
