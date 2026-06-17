@@ -1,3 +1,29 @@
+$('.btn-enviar').click(function() {
+    var nombreContacto = $(this).siblings('.contact-info').find('strong').text();
+    var saldoActual = Number(localStorage.getItem('walletSaldo')) || 0;
+    
+    var montoTexto = prompt("¿Cuánto dinero deseas enviar a " + nombreContacto + "?");
+    var montoAEnviar = Number(montoTexto);
+
+    if (isNaN(montoAEnviar) || montoAEnviar <= 0) {
+        alert('Monto inválido.');
+        return; 
+    }
+
+    if (montoAEnviar > saldoActual) {
+        alert('Saldo insuficiente. Tienes: $' + saldoActual);
+        return; 
+    }
+
+    saldoActual = saldoActual - montoAEnviar;
+    localStorage.setItem('walletSaldo', saldoActual);
+    
+    alert('Transferencia exitosa.');
+    window.location.href = "menu.html";
+});
+
+
+
 $("#btnTransfer").click(function(){
 
     let amount = Number($("#transferAmount").val());

@@ -1,34 +1,9 @@
 ```
-Flujo de navegación
-index.html
-      │
-      ▼
-login.html
-      │
-      ▼
-menu.html
- ├─────────────► deposit.html
- │                    │
- │                    ▼
- │              menu.html
- │
- ├─────────────► sendmoney.html
- │                    │
- │                    ▼
- │              menu.html
- │
- └─────────────► transactions.html
-                      │
-                      ▼
-                 menu.html
-```
-
 git init
 git add .
 git commit -m "avance"
 git push -u origin main
-
-
+```
 Alke Wallet es una billetera digital que permita a los usuarios gestionar sus activos financieros de manera segura y conveniente.
     
     La billetera debe cumplir con los siguientes requisitos:
@@ -44,14 +19,6 @@ Alke Wallet es una billetera digital que permita a los usuarios gestionar sus ac
     Aspectos a considerar:
     - Legibilidad del código: Se evaluará la claridad y organización del código desarrollado, asegurando buenas prácticas de programación y facilidad de mantenimiento.
     - Experiencia del usuario y desarrollo del proyecto: Se evaluará la interfaz de usuario y la facilidad de uso de la aplicación, asegurando una experiencia agradable y sin problemas para los usuarios.
-
-    Referencias:
-    - Librerías y Frameworks como Bootstrap y JQuery
-    - Interfaz de usuario como:
-        www.figma.com/es-la/comunidad/file/1237418337482315186/wallet-app-design
-        https://www.figma.com/es-la/comunidad/file/1192493585657573686/e-wallet
-        https://www.figma.com/es-la/comunidad/file/988997032013944291/glassmorphism-mobile-wallet-exploration
-        https://www.figma.com/es-la/comunidad/file/1031127180407434844/wallet-app-ui
     
     Tareas a desarrollar:
     - Definir la estructura general de archivos y carpetas del proyecto

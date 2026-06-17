@@ -2,23 +2,23 @@ $(document).ready(function() {
     var balance = 0;
 
     function updateBalance() {
-        $('#balance').text(balance.toFixed(2));
+        $('#balance').text(balance.toFixed(0));
     }
 
     $('#depositBtn').click(function() {
-        var amount = parseFloat($('#amount').val());
+        var amount = parseInt($('#amount').val());
         if (!isNaN(amount) && amount > 0) {
         balance += amount;
         updateBalance();
         $('#amount').val('');
-        alert('Deposit realizado!');
+        alert('Depósito realizado!');
         } else {
         alert('Monto invalido. Por favor ingrese un número positivo.');
         }
     });
 
     $('#withdrawBtn').click(function() {
-        var amount = parseFloat($('#amount').val());
+        var amount = parseInt($('#amount').val());
         if (!isNaN(amount) && amount > 0 && amount <= balance) {
         balance -= amount;
         updateBalance();
@@ -31,6 +31,9 @@ $(document).ready(function() {
 });
 
 // depositos
+
+var saldo = Number(localStorage.getItem('walletSaldo')) || 0;
+$('#balance').text('$' + saldo);
 
 var saldoActual = Number(localStorage.getItem('walletSaldo')) || 0;
 

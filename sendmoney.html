@@ -29,47 +29,72 @@
         </nav>
     </header>
 
+    <!--
     <div class="container">
-        <h2>Enviar Dinero</h2>
+        <h2>Enviar dinero</h2>
+        <hr>
         <form>
-        <div class="form-group">
-            <label for="searchContact">Buscar en la agenda de transferencias:</label>
-            <input type="text" class="form-control" id="searchContact" placeholder="Search contact">
-        </div>
-        <button type="submit" class="btn btn-primary">Agregar nuevo contacto</button>
-    <h3>Contactos</h3>
-    <ul id="contactList" class="list-group">
-        <li class="list-group-item">
-        <div class="contact-info">
-            <span class="contact-name">John Doe</span>
-            <span class="contact-details">CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span>
-        </div>
-        </li>
-        <li class="list-group-item">
-        <div class="contact-info">
-            <span class="contact-name">Jane Smith</span>
-            <span class="contact-details">CBU: 987654321, Alias: jane.smith, Banco: XYZ Bank</span>
-        </div>
-        </li>
-        <button type="submit" class="btn btn-primary">Enviar dinero</button>
+            <div class="form-group" class="contact-info">
+                <label for="transferAmount">Buscar en la agenda de transferencias:</label>
+                <select id="contact">
+                    <option><div class="contact-info"><strong>María González</strong> - Banco de Chile</div></option>
+                    <option><div class="contact-info"><strong>Juan Pérez</strong> - Banco Estado</div></option>
+                </select>
+                <input type="number" id="transferAmount" placeholder="Ingrese monto">
+                <button id="btnTransfer" class="btn btn-warning">Transferir</button>
+                <a href="newcontact.html" class="btn btn-primary">Agregar nuevo contacto</a>
+            </div>
         </form>
-        <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+    </div>
+    -->
+
+    <div class="container mt-5">
+        <h2>Enviar dinero</h2>
+        <hr>
+
+        <ul class="list-group mb-4">
+            <li class="list-group-item">
+                <div class="contact-info"><strong>Juan Pérez</strong> - Banco Estado</div>
+                <button class="btn btn-sm btn-primary mt-2 btn-enviar">Seleccionar</button>
+            </li>
+            <li class="list-group-item">
+                <div class="contact-info"><strong>María González</strong> - Banco de Chile</div>
+                <button class="btn btn-sm btn-primary mt-2 btn-enviar">Seleccionar</button>
+            </li>
+        </ul>
+        <a href="newcontact.html" class="btn btn-warning">Agregar nuevo contacto</a>
     </div>
 
-    <div id="contacts-list">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.btn-enviar').click(function() {
+            var nombreContacto = $(this).siblings('.contact-info').find('strong').text();
+            var saldoActual = Number(localStorage.getItem('walletSaldo')) || 0;
+            
+            var montoTexto = prompt("¿Cuánto dinero deseas enviar a " + nombreContacto + "?");
+            var montoAEnviar = Number(montoTexto);
 
-    </div>
+            if (isNaN(montoAEnviar) || montoAEnviar <= 0) {
+                alert('Monto inválido.');
+                return; 
+            }
 
-    <select id="contact">
-        <option>Juan Pérez</option>
-        <option>María Soto</option>
-    </select>
+            if (montoAEnviar > saldoActual) {
+                alert('Saldo insuficiente. Tienes: $' + saldoActual);
+                return; 
+            }
 
-    <input type="number" id="transferAmount">
+            saldoActual = saldoActual - montoAEnviar;
+            localStorage.setItem('walletSaldo', saldoActual);
+            
+            alert('Transferencia exitosa.');
+            window.location.href = "menu.html";
+        });
+    </script>
 
-    <button id="btnTransfer">
-        Transferir
-    </button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/balance.js"></script>
+    <script src="assets/js/transactions.js"></script>
 
     <br>
     <footer>
